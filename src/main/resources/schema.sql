@@ -7,4 +7,3 @@ CREATE TABLE IF NOT EXISTS Event (
     location varchar(10) NOT NULL,
     PRIMARY KEY (id)
 );
-

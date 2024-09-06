@@ -7,12 +7,10 @@ import java.time.LocalDateTime;
 
 public record Event(
         Integer id,
-        @NotEmpty
-        String title,
+        @NotEmpty String title,
         LocalDateTime startOn,
         LocalDateTime completeOn,
-        @Positive
-        Integer participant,
+        @Positive Integer participant,
         Location location
 ) {
 //    public Integer getId() {

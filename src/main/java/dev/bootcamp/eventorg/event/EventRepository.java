@@ -76,6 +76,23 @@ public class EventRepository {
                 "Failed to delete event " + id);
     }
 
+    public List<Event> findByLocation(String location) {
+        return jdbcClient.sql("select * from event where location = :location")
+                .param("location", location)
+                .query(Event.class)
+                .list();
+    }
+
+    public void saveAll(List<Event> events) {
+        events.forEach(this::create);
+    }
+
+    public int count() {
+        return jdbcClient.sql("select * from event")
+                .query()
+                .listOfRows()
+                .size();
+    }
 }
 //    List<Event> events = new ArrayList<>();
 //

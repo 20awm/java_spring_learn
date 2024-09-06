@@ -64,4 +64,8 @@ public class EventController {
         eventRepository.delete(id);
     }
 
+    @GetMapping("/location")
+    List<Event> findByLocation(@RequestParam String location) {
+        return eventRepository.findByLocation(location);
+    }
 }

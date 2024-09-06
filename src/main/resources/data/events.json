@@ -1,0 +1,44 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "title": "Gathering",
+      "startOn": "2024-02-20T06:05:00.000000",
+      "completeOn": "2024-02-20T10:27:00.000000",
+      "participant": 100,
+      "location": "DEPOK"
+    },
+    {
+      "id": 2,
+      "title": "Ceremony",
+      "startOn": "2024-02-22T12:16:00.000000",
+      "completeOn": "2024-02-22T14:27:00.000000",
+      "participant": 200,
+      "location": "JAKARTA"
+    },
+    {
+      "id": 3,
+      "title": "Grand Opening",
+      "startOn": "2024-03-06T19:47:00.000000",
+      "completeOn": "2024-03-06T22:06:00.000000",
+      "participant": 900,
+      "location": "BEKASI"
+    },
+    {
+      "id": 4,
+      "title": "Graduation",
+      "startOn": "2024-03-31T08:32:00.000000",
+      "completeOn": "2024-03-31T12:57:00.000000",
+      "participant": 1000,
+      "location": "TANGERANG"
+    },
+    {
+      "id": 5,
+      "title": "Live Concert",
+      "startOn": "2024-03-01T03:49:00.000000",
+      "completeOn": "2024-03-01T05:58:00.000000",
+      "participant": 1500,
+      "location": "JAKARTA"
+    }
+  ]
+}
