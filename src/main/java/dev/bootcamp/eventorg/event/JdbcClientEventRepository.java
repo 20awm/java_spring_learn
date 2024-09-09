@@ -38,15 +38,16 @@ public class JdbcClientEventRepository {
 //    }
 
     public void create(Event event) {
-        var updated = jdbcClient.sql("insert into Event(id,title,start_on,complete_on,participant,location) " +
-                "values (?,?,?,?,?,?)")
+        var updated = jdbcClient.sql("insert into Event(id,title,start_on,complete_on,participant,location,version) " +
+                "values (?,?,?,?,?,?,?)")
                 .params(List.of(
                         event.getId(),
                         event.getTitle(),
                         event.getStartOn(),
                         event.getCompleteOn(),
                         event.getParticipant(),
-                        event.getLocation()))
+                        event.getLocation(),
+                        event.getVersion()))
                 .update();
 
         Assert.state(updated == 1,

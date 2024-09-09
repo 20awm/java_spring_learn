@@ -53,4 +53,10 @@ public class EventController {
         eventService.delete(id);
     }
 
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @PutMapping("/{id}")
+    public void update(@Valid @RequestBody Event event,
+                       @PathVariable Integer id) {
+        eventService.update(id, event);
+    }
 }

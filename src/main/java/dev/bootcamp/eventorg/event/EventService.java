@@ -34,13 +34,12 @@ public class EventService {
     }
 
     // PUT
-    void update(@Valid @RequestBody Event event,
-                @PathVariable Integer id) {
+    public void update(Integer id, Event event) {
         if(!eventRepository.existsById(id)) {
             throw new EventNotFoundException(id);
         }
-        Event existingEvent = eventRepository
-                .findById(id).orElseThrow(() -> new EventNotFoundException(id));
+        Event existingEvent = eventRepository.findById(id)
+                .orElseThrow(() -> new EventNotFoundException(id));
         Event updatedEvent = new Event(
                 id,
                 event.getTitle(),
