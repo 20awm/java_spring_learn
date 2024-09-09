@@ -1,26 +1,110 @@
 package dev.bootcamp.eventorg.event;
 
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Positive;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.annotation.Version;
 
 import java.time.LocalDateTime;
 
-public record Event(
-        @Id Integer id,
-        @NotEmpty String title,
-        LocalDateTime startOn,
-        LocalDateTime completeOn,
-        @Positive Integer participant,
-        String location,
-        @Version Integer version
-) {
+@Entity
+public class Event {
 
-    public Event {
-        if(!completeOn.isAfter(startOn)) {
-            throw new IllegalArgumentException(
-                    "Complete must be after start");
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
+    @NotEmpty
+    private String title;
+
+    private LocalDateTime startOn;
+
+    private LocalDateTime completeOn;
+
+    @Positive
+    private Integer participant;
+
+    private String location;
+
+    @Version
+    private Integer version;
+
+    // Default constructor
+    public Event() {
+    }
+
+    // Parameterized constructor
+    public Event(
+            Integer id,
+            String title,
+            LocalDateTime startOn,
+            LocalDateTime completeOn,
+            Integer participant, String location, Integer version) {
+        if (!completeOn.isAfter(startOn)) {
+            throw new IllegalArgumentException("Complete must be after start");
         }
+        this.id = id;
+        this.title = title;
+        this.startOn = startOn;
+        this.completeOn = completeOn;
+        this.participant = participant;
+        this.location = location;
+        this.version = version;
+    }
+
+    // Getters and setters
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public LocalDateTime getStartOn() {
+        return startOn;
+    }
+
+    public void setStartOn(LocalDateTime startOn) {
+        this.startOn = startOn;
+    }
+
+    public LocalDateTime getCompleteOn() {
+        return completeOn;
+    }
+
+    public void setCompleteOn(LocalDateTime completeOn) {
+        this.completeOn = completeOn;
+    }
+
+    public Integer getParticipant() {
+        return participant;
+    }
+
+    public void setParticipant(Integer participant) {
+        this.participant = participant;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public Integer getVersion() {
+        return version;
+    }
+
+    public void setVersion(Integer version) {
+        this.version = version;
     }
 }
