@@ -1,5 +1,6 @@
 package dev.bootcamp.eventorg.event;
 
+import dev.bootcamp.eventorg.model.Event;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.jdbc.core.simple.JdbcClient;
@@ -8,7 +9,6 @@ import org.springframework.util.Assert;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @Repository
 public class JdbcClientEventRepository {

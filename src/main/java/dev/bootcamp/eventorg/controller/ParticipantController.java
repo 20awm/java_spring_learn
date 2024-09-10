@@ -1,5 +1,7 @@
-package dev.bootcamp.eventorg.participant;
+package dev.bootcamp.eventorg.controller;
 
+import dev.bootcamp.eventorg.model.Participant;
+import dev.bootcamp.eventorg.service.ParticipantService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

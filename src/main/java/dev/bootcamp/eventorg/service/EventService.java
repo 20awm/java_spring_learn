@@ -1,8 +1,9 @@
-package dev.bootcamp.eventorg.event;
+package dev.bootcamp.eventorg.service;
 
-import jakarta.validation.Valid;
+import dev.bootcamp.eventorg.event.EventNotFoundException;
+import dev.bootcamp.eventorg.repository.EventRepository;
+import dev.bootcamp.eventorg.model.Event;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 @Service

@@ -1,10 +1,11 @@
-package dev.bootcamp.eventorg.event;
+package dev.bootcamp.eventorg.controller;
 
+import dev.bootcamp.eventorg.model.Event;
+import dev.bootcamp.eventorg.service.EventService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/events")

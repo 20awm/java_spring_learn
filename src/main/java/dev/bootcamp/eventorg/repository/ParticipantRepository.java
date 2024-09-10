@@ -1,5 +1,6 @@
-package dev.bootcamp.eventorg.participant;
+package dev.bootcamp.eventorg.repository;
 
+import dev.bootcamp.eventorg.model.Participant;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 

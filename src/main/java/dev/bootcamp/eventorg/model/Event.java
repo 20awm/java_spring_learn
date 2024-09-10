@@ -1,4 +1,4 @@
-package dev.bootcamp.eventorg.event;
+package dev.bootcamp.eventorg.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;

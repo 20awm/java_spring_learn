@@ -1,6 +1,7 @@
-package dev.bootcamp.eventorg.participant;
+package dev.bootcamp.eventorg.service;
 
-import dev.bootcamp.eventorg.event.Event;
+import dev.bootcamp.eventorg.model.Participant;
+import dev.bootcamp.eventorg.repository.ParticipantRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
