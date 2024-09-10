@@ -25,16 +25,16 @@ public class Application {
 //		var helloWorld = new HelloWorld();
 //		System.out.println(helloWorld.sayHelloWorld());
 	}
-	@Bean
-	CommandLineRunner runner(UserRestClient client) {
-		return args -> {
-			List<User> users = client.findAll();
-			System.out.println(users);
-
-			User user = client.findById(1);
-			System.out.println(user);
-		};
-	}
+//	@Bean
+//	CommandLineRunner runner(UserRestClient client) {
+//		return args -> {
+//			List<User> users = client.findAll();
+//			System.out.println(users);
+//
+//			User user = client.findById(1);
+//			System.out.println(user);
+//		};
+//	}
 //	@Bean
 //	CommandLineRunner runner(
 //	) {
